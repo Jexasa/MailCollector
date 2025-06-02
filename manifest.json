@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Email Collector",
+  "version": "1.0",
+  "description": "Collects email addresses from web pages with user controls.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "settings.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Collector - Settings</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 min-h-screen w-screen flex items-center justify-center text-gray-300">
+  <div class="bg-gray-800 p-6 rounded-lg w-96">
+    <h2 class="text-lg font-semibold !text-white mb-4">Settings</h2>
+    <label class="block mb-2 !text-gray-300">Scan Interval (ms): <input id="scanInterval" type="number" value="5000" min="1000" class="w-24 bg-gray-700 p-1 rounded border border-gray-600 text-gray-300"></label>
+    <label class="block mb-2 !text-gray-300">Include Domains: <input id="includeDomains" type="text" placeholder="e.g., gmail.com,hotmail.com" class="w-full bg-gray-700 p-1 rounded border border-gray-600 text-gray-300"></label>
+    <label class="block mb-2 !text-gray-300">Exclude Domains: <input id="excludeDomains" type="text" placeholder="e.g., spam.com" class="w-full bg-gray-700 p-1 rounded border border-gray-600 text-gray-300"></label>
+    <div class="flex justify-end space-x-2 mt-4">
+      <button id="saveSettings" class="py-2 px-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Save</button>
+      <button id="closeSettings" class="py-2 px-4 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">Close</button>
+    </div>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>

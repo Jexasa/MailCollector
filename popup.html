@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Collector</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 min-h-[450px] w-[450px] flex flex-col text-gray-300">
+  <header class="p-4 bg-gray-800 shadow-md flex items-center justify-between">
+    <div class="flex items-center">
+      <img src="logo.png" alt="Logo" class="h-8 mr-2" onerror="this.style.display='none'">
+      <h1 class="text-xl font-semibold !text-white">Email Collector</h1>
+    </div>
+    <button id="settingsBtn" class="py-1 px-3 bg-gray-700 text-sm rounded hover:bg-gray-600 transition-colors">Settings</button>
+  </header>
+  <main class="flex-1 p-4 overflow-y-auto">
+    <div id="analytics" class="mb-2 p-2 bg-gray-800 rounded-lg text-sm border-l-4 border-indigo-600 !text-gray-300">
+      <span>Total Emails: <span id="totalEmails">0</span></span> | 
+      <span>Unique Domains: <span id="uniqueDomains">0</span></span>
+    </div>
+    <input id="domainFilter" type="text" placeholder="Filter by domain (e.g., gmail.com)" class="w-full p-2 mb-2 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-indigo-500 text-gray-300">
+    <table id="emailTable" class="w-full text-left border-2 border-gray-700 rounded-lg">
+      <thead>
+        <tr class="bg-gray-800">
+          <th class="p-2 text-sm font-semibold !text-gray-300">Index</th>
+          <th class="p-2 text-sm font-semibold !text-gray-300">Email</th>
+          <th class="p-2 text-sm font-semibold !text-gray-300">Status</th>
+        </tr>
+      </thead>
+      <tbody id="emailList"></tbody>
+    </table>
+  </main>
+  <footer class="p-4 bg-gray-800 shadow-inner flex justify-between items-center space-x-2">
+    <button id="clearBtn" class="py-2 px-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">Clear Emails</button>
+    <div class="flex space-x-2">
+      <button id="exportCSVBtn" class="py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">Export CSV</button>
+      <button id="exportJSONBtn" class="py-2 px-4 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors">Export JSON</button>
+      <button id="copyBtn" class="py-2 px-4 bg-indigo-400 text-white rounded-lg hover:bg-indigo-500 transition-colors">Copy</button>
+    </div>
+    <span id="status" class="text-sm !text-gray-300">Collecting...</span>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
