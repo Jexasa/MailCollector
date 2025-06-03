@@ -21,7 +21,7 @@ A Chrome extension that collects email addresses from web pages, including dynam
 - **Professional UI**: Consistent color scheme and placeholder for logo.
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/your-username/email-collector.git`
+1. Clone the repository: `git clone https://github.com/Jexasa/MailCollector.git`
 2. Open Chrome and go to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right.
 4. Click "Load unpacked" and select the cloned repository folder.
